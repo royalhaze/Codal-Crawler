@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use Carbon\Carbon;
 use DiDom\Document;
@@ -32,9 +34,9 @@ class Report extends Model
     {
         $parsed_data = self::parse_data_from_search_result($data);
 
-        $parsed_data = array_merge($parsed_data,self::parse_files_from_search_result($data));
+        $parsed_data = array_merge($parsed_data, self::parse_files_from_search_result($data));
 
-        if ($parsed_data['has_attachment']){
+        if ($parsed_data['has_attachment']) {
             $attach = $parsed_data['attach'];
 
             unset($parsed_data['attach']);
@@ -42,12 +44,12 @@ class Report extends Model
 
         $db = Report::create($parsed_data);
 
-        if (!$db instanceof Report){
+        if (!$db instanceof Report) {
             throw new \Exception();
         }
 
-        if (isset($attach)){
-            foreach ($attach as $file){
+        if (isset($attach)) {
+            foreach ($attach as $file) {
                 ReportData::create([
                     'report_id' => $db->id,
                     'title' => 'attachment',
@@ -75,22 +77,23 @@ class Report extends Model
         ];
     }
 
-    private static function parse_files_from_search_result($data){
+    private static function parse_files_from_search_result($data)
+    {
         $links = [];
 
-        if ($data->HasPdf){
-            $links['pdf_url'] = CodalConst::CODAL_BASE_URL.'/'.$data->PdfUrl;
+        if ($data->HasPdf) {
+            $links['pdf_url'] = CodalConst::CODAL_BASE_URL . '/' . $data->PdfUrl;
         }
 
-        if ($data->HasExcel){
+        if ($data->HasExcel) {
             $links['excel_url'] = $data->ExcelUrl;
         }
 
-        if ($data->HasXbrl){
+        if ($data->HasXbrl) {
             $links['xbrl_url'] = $data->XbrlUrl;
         }
 
-        if ($data->HasAttachment){
+        if ($data->HasAttachment) {
             $links['has_attachment'] = true;
             $links['attach'] = self::parse_attachment_from_url($data->AttachmentUrl);
         }
@@ -98,37 +101,45 @@ class Report extends Model
         return $links;
     }
 
-    private static function parse_attachment_from_url($url){
-        $url = CodalConst::CODAL_BASE_URL.$url;
+    private static function parse_attachment_from_url($url)
+    {
+        $url = CodalConst::CODAL_BASE_URL . $url;
 
-        $arrContextOptions=array(
-            "ssl"=>array(
-                "verify_peer"=>false,
-                "verify_peer_name"=>false,
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
             ),
         );
 
         $page = file_get_contents($url, false, stream_context_create($arrContextOptions));
 
-        $document = new Document($page,false);
+        $document = new Document($page, false);
 
         $tr_list = $document->find('#dgAttachmentList')[0]->children();
 
         $attach = [];
 
-        foreach ($tr_list as $key=>$value){
-            if ($key != 0){
-                $link = $value->getAttribute('onclick');
+        foreach ($tr_list as $key => $value) {
+            if ($key != 0) {
 
-                $tmp = explode("('",$link)[1];
 
-                $tmp = explode("')",$tmp)[0];
+                $link = $value->getAttribute('onclick',null);
 
-                $attach[] = CodalConst::CODAL_BASE_URL.'/'.$tmp;
+                if ($link != null && is_string($link)) {
+
+                    $tmp = explode("('", $link)[1];
+
+                    $tmp = explode("')", $tmp)[0];
+
+                    $attach[] = CodalConst::CODAL_BASE_URL . '/' . $tmp;
+                }
+
+
             }
         }
 
-       return $attach;
+        return $attach;
     }
 
     private static function parse_publish_date_to_date_time($jalaliDate)
