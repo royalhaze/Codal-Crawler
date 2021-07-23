@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "classmap": [
+            "helpers","config","const","database","database/migrations","database/models"
+        ]
+    },
+    "require": {
+        "imangazaliev/didom": "^1.16",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/database": "^8.51"
+    }
+}
