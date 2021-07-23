@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__.'/../bootstrap.php';
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -15,8 +15,25 @@ class Company extends Model
 
     protected $guarded = ['id'];
 
+    public $timestamps = false;
+
     public function Report()
     {
         $this->hasMany(Report::class);
+    }
+
+    public static function getBySymbol($symbol)
+    {
+        return Company::where('symbol',$symbol)->firstOrFail();
+    }
+
+    public static function store_by_search_result($data)
+    {
+        $db = Company::updateOrCreate(
+            ['symbol' => $data->sy , 'name' => $data->n],
+            ['codal_id' => (int)$data->i,'codal_t' => (int)$data->t,'codal_st' =>(int) $data->st]
+        );
+
+        return ($db instanceof Company)?true:false;
     }
 }

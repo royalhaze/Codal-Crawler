@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="" />
+    <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/const/CodalConst.php" beforeDir="false" afterPath="$PROJECT_DIR$/const/CodalConst.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/Company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/models/ReportData.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/ReportData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/CodalSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CodalSearch.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,20 +27,20 @@
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="11" />
+          <entry key="PHP Class.type" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="2" />
-          <entry key="php" value="19" />
+          <entry key="php" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="19" />
+          <entry key="PHP" value="34" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -40,13 +49,13 @@
           <entry key="dummy" value="9" />
           <entry key="gitignore" value="27" />
           <entry key="json" value="100" />
-          <entry key="php" value="4175" />
+          <entry key="php" value="9084" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="100" />
-          <entry key="PHP" value="4175" />
+          <entry key="PHP" value="9084" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
@@ -54,20 +63,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="288">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#7#26#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="179">
+              <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/models/ReportData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/models/Report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="68" column="50" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="50" />
+              <folding>
+                <element signature="e#7#25#0#PHP" expanded="true" />
+                <element signature="n#parse_files_from_search_result#0;n#Report#0;n#!!top" />
+                <element signature="n#parse_attachment_from_url#0;n#Report#0;n#!!top" />
+                <element signature="e#2081#2179#0#PHP" />
+                <element signature="n#parse_publish_date_to_date_time#0;n#Report#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/CodalSearchResultParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="912">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+              <folding>
+                <element signature="n#__construct#0;n#CodalSearch#0;n#!!top" />
+                <element signature="e#964#1010#0#PHP" />
+                <element signature="n#store_companies#0;n#CodalSearch#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/const/CodalConst.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -75,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/AppConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="192">
+              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
               <folding>
                 <element signature="n#SearchParams#0;n#CodalFilterConfig#0;n#!!top" />
                 <element signature="n#DatabaseConfig#0;n#AppConfig#0;n#!!top" />
@@ -87,6 +156,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -95,21 +167,23 @@
         <option value="$PROJECT_DIR$/helpers/BaseHelper.php" />
         <option value="$PROJECT_DIR$/config/CodalSearchConfig.php" />
         <option value="$PROJECT_DIR$/config/defaultSearch.json" />
-        <option value="$PROJECT_DIR$/const/CodalConst.php" />
         <option value="$PROJECT_DIR$/config/CodalFilterConfig.php" />
         <option value="$PROJECT_DIR$/helpers/CodalSearchFilter.php" />
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/helpers/CodalSearch.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/database/bootstrap.php" />
         <option value="$PROJECT_DIR$/database/models/Companies.php" />
-        <option value="$PROJECT_DIR$/database/models/Company.php" />
-        <option value="$PROJECT_DIR$/database/models/Report.php" />
-        <option value="$PROJECT_DIR$/database/models/ReportData.php" />
-        <option value="$PROJECT_DIR$/database/migrations/create_tables.php" />
         <option value="$PROJECT_DIR$/database/migrations/drop_tables.php" />
         <option value="$PROJECT_DIR$/config/AppConfig.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/helpers/CodalSearch.php" />
+        <option value="$PROJECT_DIR$/database/models/Company.php" />
+        <option value="$PROJECT_DIR$/helpers/OtherHelpers.php" />
+        <option value="$PROJECT_DIR$/const/CodalConst.php" />
+        <option value="$PROJECT_DIR$/database/models/ReportData.php" />
+        <option value="$PROJECT_DIR$/database/migrations/create_tables.php" />
+        <option value="$PROJECT_DIR$/database/models/Report.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" />
       </list>
     </option>
   </component>
@@ -123,8 +197,10 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -135,6 +211,33 @@
               <item name="codal" type="b2602c69:ProjectViewProjectNode" />
               <item name="codal" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="const" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -143,6 +246,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/helpers/CodalSearchResultParser.php&#10;Report&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/ReportData.php&#10;Const&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;Compan&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;create&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;Compa&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;CodalC&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;cre&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;creae&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -175,19 +279,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627025333373</updated>
-      <workItem from="1627025335193" duration="15129000" />
+      <workItem from="1627025335193" duration="26937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15129000" />
+    <option name="totallyTimeSpent" value="26937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -273,39 +377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-          <folding>
-            <element signature="e#6#96#0#PHP" />
-            <element signature="n#search#0;n#CodalSearch#0;n#!!top" />
-            <element signature="e#834#873#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/Report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/ReportData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -320,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -334,10 +398,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/AppConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="192">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
           <folding>
             <element signature="n#SearchParams#0;n#CodalFilterConfig#0;n#!!top" />
             <element signature="n#DatabaseConfig#0;n#AppConfig#0;n#!!top" />
@@ -345,24 +423,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/const/CodalConst.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/helpers/OtherHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="377">
+          <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
+            <element signature="n#__construct#0;n#CodalSearch#0;n#!!top" />
+            <element signature="e#964#1010#0#PHP" />
+            <element signature="n#store_companies#0;n#CodalSearch#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/ReportData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/Report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="68" column="50" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="50" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+            <element signature="n#parse_files_from_search_result#0;n#Report#0;n#!!top" />
+            <element signature="n#parse_attachment_from_url#0;n#Report#0;n#!!top" />
+            <element signature="e#2081#2179#0#PHP" />
+            <element signature="n#parse_publish_date_to_date_time#0;n#Report#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/CodalSearchResultParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#7#26#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
