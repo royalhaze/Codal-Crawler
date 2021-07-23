@@ -39,9 +39,9 @@ Capsule::schema()->create('company',function ($table){
     $table->increments('id');
     $table->string('symbol',100);
     $table->string('name',256);
-    $table->integer('codal_id');
-    $table->integer('codal_t');
-    $table->integer('codal_st');
+    $table->integer('codal_id')->nullable();
+    $table->integer('codal_t')->nullable();
+    $table->integer('codal_st')->nullable();
 });
 
 echo 'company table created successfully'.PHP_EOL;
@@ -50,7 +50,6 @@ echo 'company table created successfully'.PHP_EOL;
 Capsule::schema()->create('report_data',function ($table){
     $table->increments('id');
     $table->integer('report_id');
-    $table->integer('company_id');
     $table->string('title');
     $table->text('value');
 });
