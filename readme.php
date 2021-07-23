@@ -1,4 +1,7 @@
 <?php
+
+use Carbon\Carbon;
+
 include 'vendor/autoload.php';
 
 /**
@@ -8,14 +11,14 @@ include 'vendor/autoload.php';
  * Time: 22:03
  */
 
-//first set db config in /config/AppConfig.php
+//  1-first run composer install and set db config in /config/AppConfig.php
 
-/* then run
+/*  2- then run
 php database/migrations/create_tables.php
 command to create tables
 */
 
-//now you must store companies by this line
+//  3-now you must store companies by this line
 
 //CodalSearch::get_companies();
 
@@ -34,6 +37,7 @@ $crawl = new CodalSearch();
 $crawl->search()->get_result()->addLetterCodeFilter(['ن-۱۰'])->store();
 
 //even can set filter for search like this
+
 $filter = new CodalSearchFilter();
 
 $filter->Publisher(true);
@@ -43,4 +47,3 @@ $filter->Audited(true);
 $crawl = new CodalSearch($filter);
 
 $crawl->search()->get_result()->store();
-

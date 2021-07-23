@@ -36,7 +36,7 @@ class Report extends Model
 
         $parsed_data = array_merge($parsed_data, self::parse_files_from_search_result($data));
 
-        if ($parsed_data['has_attachment']) {
+        if (isset($parsed_data['has_attachment']) && $parsed_data['has_attachment']) {
             $attach = $parsed_data['attach'];
 
             unset($parsed_data['attach']);
@@ -121,8 +121,8 @@ class Report extends Model
         $attach = [];
 
         foreach ($tr_list as $key => $value) {
-            if ($key != 0) {
 
+            if ($key != 0 && $value->getNode()->nodeName == 'tr') {
 
                 $link = $value->getAttribute('onclick',null);
 
@@ -134,8 +134,7 @@ class Report extends Model
 
                     $attach[] = CodalConst::CODAL_BASE_URL . '/' . $tmp;
                 }
-
-
+                
             }
         }
 
