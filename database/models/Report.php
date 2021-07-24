@@ -58,7 +58,32 @@ class Report extends Model
             }
         }
 
+        if ($data->SuperVision->UnderSupervision == 1){
+            self::store_super_vision_data($data->SuperVision,$db->id);
+        }
+
         return true;
+    }
+
+    private static function store_super_vision_data($super_vision,$report_id){
+
+        if ($super_vision->AdditionalInfo != null && $super_vision->AdditionalInfo != ''){
+            ReportData::create([
+               'report_id' => $report_id,
+               'title' => 'SupervisionAdditionalInfo',
+               'value' => $super_vision->AdditionalInfo
+            ]);
+        }
+
+        if (is_array($super_vision->Reasons)){
+            foreach ($super_vision->Reasons as $item){
+                ReportData::create([
+                    'report_id' => $report_id,
+                    'title' => 'SupervisionReason',
+                    'value' => $item
+                ]);
+            }
+        }
     }
 
     private static function parse_data_from_search_result($data)
@@ -134,7 +159,7 @@ class Report extends Model
 
                     $attach[] = CodalConst::CODAL_BASE_URL . '/' . $tmp;
                 }
-                
+
             }
         }
 

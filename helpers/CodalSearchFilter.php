@@ -1,4 +1,8 @@
 <?php
+
+use Carbon\Carbon;
+use Morilog\Jalali\Jalalian;
+
 /**
  * Created by PhpStorm.
  * User: phpartisan[dot]ir
@@ -114,13 +118,17 @@ class CodalSearchFilter
         return $this;
     }
 
-    public function FromDate()
+    public function FromDate(Carbon $carbon)
     {
+        $this->params['FromDate'] = Jalalian::fromCarbon($carbon)->format('Y/m/d');
 
+        return $this;
     }
 
-    public function ToDate()
+    public function ToDate(Carbon $carbon)
     {
+        $this->params['ToDate'] = Jalalian::fromCarbon($carbon)->format('Y/m/d');
 
+        return $this;
     }
 }

@@ -8,6 +8,13 @@
 
 class AppConfig
 {
+    public static function CronJobLetterCodeFilter()
+    {
+        return [
+
+        ];
+    }
+
     public static function DefaultSearchParams()
     {
         return [
