@@ -28,8 +28,8 @@ Capsule::schema()->create('reports',function ($table){
     $table->boolean('has_attachment')->default(0);
     $table->boolean('has_super_vision')->default(0);
     $table->boolean('under_super_vision')->default(0);
-    $table->timestamp('publish_time');
-    $table->timestamp('crawl_time');
+    $table->datetime('publish_time');
+    $table->datetime('crawl_time');
 });
 
 echo 'reports table created successfully'.PHP_EOL;

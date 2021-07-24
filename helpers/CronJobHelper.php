@@ -13,29 +13,31 @@ class CronJobHelper
 {
     public static function get_new_reports(array $LetterCode = [])
     {
-        $last_record = self::get_last_report_inserted_to_db();
-
         $page = 1;
 
         $search = new CodalSearch();
 
-        while (true){
-            $isOnThisPage = false;
+        if (Report::count() != 0){
+            $last_record = self::get_last_report_inserted_to_db();
 
-            $letters = $search->search($page)->result->Letters;
+            while (true){
+                $isOnThisPage = false;
 
-            foreach ($letters as $item){
-                if ($item->TracingNo == $last_record['tracking_no']){
-                    $isOnThisPage = true;
+                $letters = $search->search($page)->result->Letters;
+
+                foreach ($letters as $item){
+                    if ($item->TracingNo == $last_record['tracking_no']){
+                        $isOnThisPage = true;
+                        break;
+                    }
+                }
+
+                if ($isOnThisPage){
                     break;
                 }
-            }
 
-            if ($isOnThisPage){
-                break;
+                $page++;
             }
-
-            $page++;
         }
 
         for ($i = $page;$i >= 1;$i--){
