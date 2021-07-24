@@ -8,6 +8,6 @@ require 'vendor/autoload.php';
  * Time: 04:45
  */
 
-CronJobHelper::get_new_reports(AppConfig::CronJobLetterCodeFilter());
-
 CronJobHelper::fetch_companies();
+
+CronJobHelper::get_new_reports(AppConfig::CronJobLetterCodeFilter());

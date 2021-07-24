@@ -1,7 +1,4 @@
 <?php
-
-use Carbon\Carbon;
-
 include 'vendor/autoload.php';
 
 /**
@@ -11,18 +8,7 @@ include 'vendor/autoload.php';
  * Time: 22:03
  */
 
-//  1-first run composer install and set db config in /config/AppConfig.php
-
-/*  2- then run
-php database/migrations/create_tables.php
-command to create tables
-*/
-
-//  3-now you must store companies by this line
-
-CodalSearch::get_companies();
-
-//and get Codal Reports
+//get Codal Reports
 
 $crawl = new CodalSearch();
 
