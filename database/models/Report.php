@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Report extends Model
 {
-    protected $table = 'reports';
+    protected $table = AppConfig::TABLE_PREFIX.'reports';
 
     protected $guarded = ['id'];
 
@@ -92,13 +92,16 @@ class Report extends Model
 
         return [
             'company_id' => $company->id,
+            'symbol_id' => $company->symbol_id,
+            'symbol' => $data->Symbol,
             'title' => $data->Title,
             'tracking_no' => (int)$data->TracingNo,
             'letter_code' => $data->LetterCode,
             'has_super_vision' => ($data->SuperVision->UnderSupervision == 1) ? true : false,
             'under_super_vision' => ($data->UnderSupervision == 1) ? true : false,
             'publish_time' => self::parse_publish_date_to_date_time($data->PublishDateTime),
-            'crawl_time' => Carbon::now('Asia/Tehran')->toDateTime()
+            'publish_time_original' => $data->PublishDateTime,
+            'crawl_time' => Carbon::now('Asia/Tehran')->toDateTime(),
         ];
     }
 

@@ -31,7 +31,7 @@ Capsule::schema()->create($tables_prefix.'reports',function ($table){
     $table->boolean('has_attachment')->default(0);
     $table->boolean('has_super_vision')->default(0);
     $table->boolean('under_super_vision')->default(0);
-    $table->string('publish_time_default');
+    $table->string('publish_time_original');
     $table->datetime('publish_time');
     $table->datetime('crawl_time');
 });

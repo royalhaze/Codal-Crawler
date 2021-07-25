@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
-    protected $table = 'company';
+    protected $table = AppConfig::TABLE_PREFIX.'company';
 
     protected $guarded = ['id'];
 

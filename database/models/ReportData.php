@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ReportData extends Model
 {
-    protected $table = 'report_data';
+    protected $table = AppConfig::TABLE_PREFIX.'report_data';
 
     protected $guarded = ['id'];
 
