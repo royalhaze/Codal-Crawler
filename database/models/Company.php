@@ -29,9 +29,11 @@ class Company extends Model
 
     public static function store_by_search_result($data)
     {
+        $symbol_id = Symbol::getSymbolIdBySymbol($data->sy);
+
         $db = Company::updateOrCreate(
             ['symbol' => $data->sy , 'name' => $data->n],
-            ['codal_id' => (int)$data->i,'codal_t' => (int)$data->t,'codal_st' =>(int) $data->st]
+            ['codal_id' => (int)$data->i,'codal_t' => (int)$data->t,'codal_st' =>(int) $data->st,'symbol_id' => $symbol_id]
         );
 
         return ($db instanceof Company)?true:false;

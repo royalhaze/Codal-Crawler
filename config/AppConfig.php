@@ -9,6 +9,9 @@
 class AppConfig
 {
     const TABLE_PREFIX = 'cdt_';
+    const SYMBOLS_TABLE_NAME = 'symbols_copy';
+    const SYMBOL_NAME_COLUMN_NAME = 'symbol';
+    const SYMBOL_ID_COLUMN_NAME = 'symbol_id';
 
     public static function CronJobLetterCodeFilter()
     {

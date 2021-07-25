@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config/AppConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/AppConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models/ReportData.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/ReportData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,21 +25,21 @@
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="14" />
+          <entry key="PHP Class.type" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="2" />
-          <entry key="php" value="64" />
+          <entry key="php" value="70" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="64" />
+          <entry key="PHP" value="70" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -50,14 +48,14 @@
           <entry key="dummy" value="9" />
           <entry key="gitignore" value="27" />
           <entry key="json" value="100" />
-          <entry key="php" value="12150" />
+          <entry key="php" value="12549" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="100" />
-          <entry key="PHP" value="12150" />
+          <entry key="PHP" value="12549" />
           <entry key="PLAIN_TEXT" value="320" />
         </counts>
       </usages-collector>
@@ -65,43 +63,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="33" column="44" lean-forward="true" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="269">
+              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="e#212#365#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cronjob.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helpers/CodalSearchResultParser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helpers/CronJobHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-              <folding>
-                <element signature="n#fetch_companies#0;n#CronJobHelper#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -136,12 +104,13 @@
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/helpers/CronJobHelper.php" />
         <option value="$PROJECT_DIR$/database/migrations/drop_tables.php" />
-        <option value="$PROJECT_DIR$/config/AppConfig.php" />
         <option value="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" />
-        <option value="$PROJECT_DIR$/database/migrations/create_tables.php" />
-        <option value="$PROJECT_DIR$/database/models/Company.php" />
         <option value="$PROJECT_DIR$/database/models/Report.php" />
         <option value="$PROJECT_DIR$/database/models/ReportData.php" />
+        <option value="$PROJECT_DIR$/database/models/Symbol.php" />
+        <option value="$PROJECT_DIR$/config/AppConfig.php" />
+        <option value="$PROJECT_DIR$/database/models/Company.php" />
+        <option value="$PROJECT_DIR$/database/migrations/create_tables.php" />
       </list>
     </option>
   </component>
@@ -276,12 +245,12 @@
       <option name="presentableId" value="Default" />
       <updated>1627025333373</updated>
       <workItem from="1627025335193" duration="37613000" />
-      <workItem from="1627226070112" duration="1852000" />
+      <workItem from="1627226070112" duration="2678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39465000" />
+    <option name="totallyTimeSpent" value="40291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -384,17 +353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="n#__construct#0;n#CodalSearch#0;n#!!top" />
-            <element signature="n#store_companies#0;n#CodalSearch#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -412,50 +370,6 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/drop_tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/AppConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-          <folding>
-            <element signature="n#DefaultSearchParams#0;n#AppConfig#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="44" lean-forward="true" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding>
-            <element signature="e#212#365#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cronjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/CronJobHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="n#fetch_companies#0;n#CronJobHelper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/ReportData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
@@ -478,17 +392,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/Company.php">
+    <entry file="file://$PROJECT_DIR$/helpers/CodalSearchResultParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="247">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/CodalSearchResultParser.php">
+    <entry file="file://$PROJECT_DIR$/helpers/CronJobHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="373">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="n#fetch_companies#0;n#CronJobHelper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cronjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+          <folding>
+            <element signature="n#__construct#0;n#CodalSearch#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/Symbol.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/AppConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="n#DefaultSearchParams#0;n#AppConfig#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/ReportData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/create_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding>
+            <element signature="e#212#365#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

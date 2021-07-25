@@ -20,7 +20,7 @@ $tables_prefix = AppConfig::TABLE_PREFIX;
 Capsule::schema()->create($tables_prefix.'reports',function ($table){
     $table->increments('id');
     $table->integer('company_id')->unsigned();
-    $table->integer('symbol_id')->unsigned()->nullable();
+    $table->string('symbol_id',20)->nullable();
     $table->string('symbol',128);
     $table->string('title');
     $table->integer('tracking_no')->unsigned();
@@ -41,7 +41,7 @@ echo 'reports table created successfully'.PHP_EOL;
 //create company table
 Capsule::schema()->create($tables_prefix.'company',function ($table){
     $table->increments('id');
-    $table->integer('symbol_id')->unsigned()->nullable();
+    $table->string('symbol_id',20)->nullable();
     $table->string('symbol',100);
     $table->string('name',256);
     $table->integer('codal_id')->nullable()->unsigned();
