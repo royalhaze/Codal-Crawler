@@ -13,9 +13,11 @@ $db = Capsule::schema();
 
 $tables = ['reports','report_data','company'];
 
+$tables_prefix = AppConfig::TABLE_PREFIX;
+
 foreach ($tables as $item){
-    if ($db->hasTable($item)){
-        $db->drop($item);
-        echo $item.' table drop success'.PHP_EOL;
+    if ($db->hasTable($tables_prefix.$item)){
+        $db->drop($tables_prefix.$item);
+        echo $tables_prefix.$item.' table drop success'.PHP_EOL;
     }
 }

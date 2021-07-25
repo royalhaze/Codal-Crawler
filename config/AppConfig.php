@@ -8,6 +8,8 @@
 
 class AppConfig
 {
+    const TABLE_PREFIX = 'cdt_';
+
     public static function CronJobLetterCodeFilter()
     {
         return [
@@ -47,7 +49,6 @@ class AppConfig
             'password' => 'root',
             'charset' => 'utf8',
             'collation' => 'utf8_general_ci',
-            'prefix' => 'cdl_',
             'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock'
         ];
     }
