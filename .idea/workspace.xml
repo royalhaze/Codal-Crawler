@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/N10Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/N10Helper.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,14 +50,14 @@
           <entry key="dummy" value="9" />
           <entry key="gitignore" value="27" />
           <entry key="json" value="100" />
-          <entry key="php" value="18130" />
+          <entry key="php" value="18879" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="100" />
-          <entry key="PHP" value="18130" />
+          <entry key="PHP" value="18879" />
           <entry key="PLAIN_TEXT" value="320" />
         </counts>
       </usages-collector>
@@ -99,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/N10Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
+            <state relative-caret-position="374">
+              <caret line="157" column="25" lean-forward="true" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
               <folding>
                 <element signature="e#7#26#0#PHP" expanded="true" />
                 <element signature="e#189#380#0#PHP" />
@@ -111,15 +110,16 @@
                 <element signature="e#1341#1655#0#PHP" />
                 <element signature="n#get_header_data#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#get_al#0;n#N10Helper#0;n#!!top" />
-                <element signature="e#3372#3411#0#PHP" />
                 <element signature="e#2815#2854#0#PHP" />
-                <element signature="n#get_page_content_by_name#0;n#N10Helper#0;n#!!top" />
+                <element signature="e#4462#4881#0#PHP" />
+                <element signature="e#4169#4208#0#PHP" />
                 <element signature="n#get_json_data_from_html#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#get_table_data_from_json#1;n#N10Helper#0;n#!!top" />
                 <element signature="n#make_table_from_json#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#get_en_table_name_by_title#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#get_sheet_id_from_url#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#get_page_url_by_sheet_id#0;n#N10Helper#0;n#!!top" />
+                <element signature="n#get_page_content_by_name#0;n#N10Helper#0;n#!!top" />
                 <element signature="n#dd#0;n#N10Helper#0;n#!!top" />
               </folding>
             </state>
@@ -356,12 +356,12 @@
       <workItem from="1627252118909" duration="162000" />
       <workItem from="1627257030862" duration="3352000" />
       <workItem from="1627414554136" duration="8528000" />
-      <workItem from="1627551516950" duration="8793000" />
+      <workItem from="1627551516950" duration="10774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61820000" />
+    <option name="totallyTimeSpent" value="63801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -695,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers/N10Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
+        <state relative-caret-position="374">
+          <caret line="157" column="25" lean-forward="true" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
           <folding>
             <element signature="e#7#26#0#PHP" expanded="true" />
             <element signature="e#189#380#0#PHP" />
@@ -707,15 +707,16 @@
             <element signature="e#1341#1655#0#PHP" />
             <element signature="n#get_header_data#0;n#N10Helper#0;n#!!top" />
             <element signature="n#get_al#0;n#N10Helper#0;n#!!top" />
-            <element signature="e#3372#3411#0#PHP" />
             <element signature="e#2815#2854#0#PHP" />
-            <element signature="n#get_page_content_by_name#0;n#N10Helper#0;n#!!top" />
+            <element signature="e#4462#4881#0#PHP" />
+            <element signature="e#4169#4208#0#PHP" />
             <element signature="n#get_json_data_from_html#0;n#N10Helper#0;n#!!top" />
             <element signature="n#get_table_data_from_json#1;n#N10Helper#0;n#!!top" />
             <element signature="n#make_table_from_json#0;n#N10Helper#0;n#!!top" />
             <element signature="n#get_en_table_name_by_title#0;n#N10Helper#0;n#!!top" />
             <element signature="n#get_sheet_id_from_url#0;n#N10Helper#0;n#!!top" />
             <element signature="n#get_page_url_by_sheet_id#0;n#N10Helper#0;n#!!top" />
+            <element signature="n#get_page_content_by_name#0;n#N10Helper#0;n#!!top" />
             <element signature="n#dd#0;n#N10Helper#0;n#!!top" />
           </folding>
         </state>

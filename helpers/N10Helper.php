@@ -24,12 +24,11 @@ class N10Helper
 
     private $pages_to_get_en = [
         'صورت سود و زیان' => 'Income Statement',
-        'نظر حسابرس' => 'hala',
         'صورت سود و زیان جامع' => 'Comprehensive Income Statement',
         'صورت وضعیت مالی' => 'Balance Sheet',
         'صورت جریان های نقدی' => 'Cash Flow',
         'جریان وجوه نقد' => 'Cash Flow',
-        'ترازنامه' => 'hala'
+        'ترازنامه' => 'Balance Sheet'
     ];
 
     private $pages_has_general_table = [
@@ -148,10 +147,14 @@ class N10Helper
         foreach ($this->pages as $title => $sheet_id){
             if (in_array($title,$this->pages_has_general_table)){
                 $data[$title] = $this->parse_general_tables($title);
+            }elseif ($title == 'نظر حسابرس'){
+                $data[$title] = $this->parse_auditor_opinion();
+            }elseif ($title == 'ترازنامه'){
+                $data[$title] = $this->parse_balance_sheet_table();
             }
         }
-
         $this->data = $data;
+
         $this->dd($data);
     }
 
@@ -170,11 +173,51 @@ class N10Helper
         return $this->make_table_from_json($table_data);
     }
 
-    //logic parse codal json to table
+    public function parse_balance_sheet_table()
+    {
+        $data = $this->parse_general_tables('ترازنامه');
 
-    private function get_page_content_by_name($title){
-        return $this->pages_content[$this->pages[$title]];
+        $parsed_data = [];
+
+        foreach ($data['data'] as $key => $value){
+
+            if (isset($value[1]) && $value[1] != ''){
+                $parsed_data[] = [
+                    1 => $value[1],
+                    2 => $value[2],
+                    3 => $value[3],
+                    4 => $value[4],
+                ];
+            }
+
+            if (isset($value[5]) && $value[5] != ''){
+                $parsed_data[] = [
+                    1 => $value[5],
+                    2 => $value[6],
+                    3 => $value[7],
+                    4 => $value[8],
+                ];
+            }
+        }
+
+        return [
+            'data' => $parsed_data,
+            'header' => $data['header']
+        ];
     }
+
+    public function parse_auditor_opinion()
+    {
+        $content = $this->get_page_content_by_name('نظر حسابرس');
+
+        $didom = new Document($content);
+
+        $table = $didom->find('#ctl00_cphBody_ucLetterAuditingV2_DataList1');
+
+        return $table[0]->getNode()->textContent;
+    }
+
+    //logic parse codal json to table
 
     private function get_json_data_from_html($content){
         $tmp = explode('var datasource = ',$content)[1];
@@ -242,6 +285,10 @@ class N10Helper
         $url_base = $parse_url['scheme'].'://'.$parse_url['host'].$parse_url['path'];
         $url_query = explode('sheetId=',$parse_url['query'])[0].'sheetId='.$sheet_id;
         return $url_base.'?'.$url_query;
+    }
+
+    private function get_page_content_by_name($title){
+        return $this->pages_content[$this->pages[$title]];
     }
 
     public function dd($val)
