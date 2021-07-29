@@ -22,6 +22,24 @@ class N10Helper
         'ترازنامه'
     ];
 
+    private $pages_to_get_en = [
+        'صورت سود و زیان' => 'Income Statement',
+        'نظر حسابرس' => 'hala',
+        'صورت سود و زیان جامع' => 'Comprehensive Income Statement',
+        'صورت وضعیت مالی' => 'Balance Sheet',
+        'صورت جریان های نقدی' => 'Cash Flow',
+        'جریان وجوه نقد' => 'Cash Flow',
+        'ترازنامه' => 'hala'
+    ];
+
+    private $pages_has_general_table = [
+        'صورت سود و زیان',
+        'صورت سود و زیان جامع',
+        'صورت وضعیت مالی',
+        'صورت جریان های نقدی',
+        'جریان وجوه نقد',
+    ];
+
     private $report_url,$pages;
 
     private $pages_content = [];
@@ -29,6 +47,8 @@ class N10Helper
     public $company_type;
 
     public $page_header_content = [];
+
+    public $data;
 
     public function __construct($report_url)
     {
@@ -113,78 +133,41 @@ class N10Helper
         $this->page_header_content = $data;
     }
 
-    private function get_sheet_id_from_url($url){
-        return explode('sheetId=',parse_url($url)['query'])[1];
+    public function get_all_pages()
+    {
+        foreach ($this->pages as $title => $sheet_id){
+            $url = $this->get_page_url_by_sheet_id($sheet_id);
+
+            $this->get_page_content($url);
+        }
     }
 
-    //detect company type !?
+    public function get_all_pages_data()
+    {
+        $data = [];
+        foreach ($this->pages as $title => $sheet_id){
+            if (in_array($title,$this->pages_has_general_table)){
+                $data[$title] = $this->parse_general_tables($title);
+            }
+        }
+
+        $this->data = $data;
+        $this->dd($data);
+    }
 
     //parse pages data
 
-    public function parse_profit_and_loss_table_data()
+    public function parse_general_tables($title)
     {
-        $content = $this->get_page_content_by_name('صورت سود و زیان');
+        $content = $this->get_page_content_by_name($title);
 
         $json = $this->get_json_data_from_html($content);
 
-        $table_data = $this->get_table_data_from_json($json,'صورت سود و زیان');
+        $table_en_name = $this->get_en_table_name_by_title($title);
+
+        $table_data = $this->get_en_table_data_from_json($json,$table_en_name);
 
         return $this->make_table_from_json($table_data);
-    }
-
-    public function parse_general_profit_and_loss_table_data()
-    {
-        $content = $this->get_page_content_by_name('صورت سود و زیان جامع');
-
-        $json = $this->get_json_data_from_html($content);
-
-        $table_data = $this->get_table_data_from_json($json,'صورت سود و زیان جامع');
-
-        return $this->make_table_from_json($table_data);
-    }
-
-    public function parse_financial_statements_table_data()
-    {
-        $content = $this->get_page_content_by_name('صورت وضعیت مالی');
-
-        $json = $this->get_json_data_from_html($content);
-
-        $table_data = $this->get_table_data_from_json($json,'صورت وضعیت مالی');
-
-        return $this->make_table_from_json($table_data);
-    }
-
-    public function parse_cash_flow_statement_table_data()
-    {
-        $content = $this->get_page_content_by_name('صورت جریان های نقدی');
-
-        $json = $this->get_json_data_from_html($content);
-
-        $table_data = $this->get_Entable_data_from_json($json,'Cash Flow');
-
-        return $this->make_table_from_json($table_data);
-    }
-
-    public function parse_cash_flow_table_data()
-    {
-        $content = $this->get_page_content_by_name('جریان وجوه نقد');
-
-        $json = $this->get_json_data_from_html($content);
-
-        $table_data = $this->get_Entable_data_from_json($json,'Cash Flow');
-
-        return $this->make_table_from_json($table_data);
-    }
-
-    public function parse_balance_sheet_table_data()
-    {
-        $content = $this->get_page_content_by_name('ترازنامه');
-
-        $json = $this->get_json_data_from_html($content);
-
-        $table_data = $this->get_Entable_data_from_json($json,'Balance Sheet');
-
-        $this->dd($this->make_table_from_json($table_data));
     }
 
     //logic parse codal json to table
@@ -205,19 +188,7 @@ class N10Helper
         return json_decode($tmp);
     }
 
-    private function get_table_data_from_json($json,$table_name){
-
-        $tables = $json->sheets[0]->tables;
-
-        foreach ($tables as $table){
-            if ($table->title_Fa == $table_name){
-                return $table->cells;
-            }
-        }
-        return null;
-    }
-
-    private function get_Entable_data_from_json($json,$table_name){
+    private function get_en_table_data_from_json($json,$table_name){
 
         $tables = $json->sheets[0]->tables;
 
@@ -250,6 +221,27 @@ class N10Helper
           'data' => $table,
           'header' => $headers
         ];
+    }
+
+    //helpers
+
+    private function get_en_table_name_by_title($title){
+        foreach ($this->pages_to_get_en as $key => $value){
+            if ($key == $title){
+                return $value;
+            }
+        }
+    }
+
+    private function get_sheet_id_from_url($url){
+        return explode('sheetId=',parse_url($url)['query'])[1];
+    }
+
+    private function get_page_url_by_sheet_id($sheet_id){
+        $parse_url = parse_url($this->report_url);
+        $url_base = $parse_url['scheme'].'://'.$parse_url['host'].$parse_url['path'];
+        $url_query = explode('sheetId=',$parse_url['query'])[0].'sheetId='.$sheet_id;
+        return $url_base.'?'.$url_query;
     }
 
     public function dd($val)
