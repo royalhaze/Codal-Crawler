@@ -1,19 +1,18 @@
 <?php
-require __DIR__.'/../bootstrap.php';
-use Illuminate\Database\Capsule\Manager as Capsule;
-
 /**
  * Created by PhpStorm.
  * User: phpartisan[dot]ir
- * Date: 7/23/21
- * Time: 16:37
+ * Date: 8/1/21
+ * Time: 19:44
  */
 
-require 'n10Tables/drop_n_10_tables.php';
+require __DIR__.'/../bootstrap.php';
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 
 $db = Capsule::schema();
 
-$tables = ['reports','report_data','company'];
+$tables = ['report_decision','report_decision_data'];
 
 $tables_prefix = AppConfig::TABLE_PREFIX;
 

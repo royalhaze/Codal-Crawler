@@ -7,15 +7,15 @@ use Illuminate\Database\Capsule\Manager as Capsule;
  * Date: 7/28/21
  * Time: 00:07
  */
-
+$tables_prefix = AppConfig::TABLE_PREFIX;
 $db = Capsule::schema();
 
-if ($db->hasTable('reports') || $db->hasTable('report_data') || $db->hasTable('company')){
+if ($db->hasTable($tables_prefix.'report_decision') || $db->hasTable('report_decision_data')){
     echo "Please drop table's first !!!".PHP_EOL;
     die();
 }
 
-$tables_prefix = AppConfig::TABLE_PREFIX;
+
 
 //create reports table
 Capsule::schema()->create($tables_prefix.'report_decision',function ($table){
@@ -30,7 +30,7 @@ Capsule::schema()->create($tables_prefix.'report_decision',function ($table){
     $table->string('publisher_status');
 });
 
-echo 'reports table created successfully'.PHP_EOL;
+echo 'report_decision table created successfully'.PHP_EOL;
 
 //create report data table
 Capsule::schema()->create($tables_prefix.'report_decision_data',function ($table){
@@ -44,4 +44,4 @@ Capsule::schema()->create($tables_prefix.'report_decision_data',function ($table
     $table->boolean('is_for_this_year');
 });
 
-echo 'report_data table created successfully'.PHP_EOL;
+echo 'report_decision_data table created successfully'.PHP_EOL;

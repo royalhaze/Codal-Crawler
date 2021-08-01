@@ -7,6 +7,9 @@ use Illuminate\Database\Capsule\Manager as Capsule;
  * Date: 7/23/21
  * Time: 16:37
  */
+
+require 'n10Tables/create_n_10_tables.php';
+
 $db = Capsule::schema();
 
 if ($db->hasTable('reports') || $db->hasTable('report_data') || $db->hasTable('company')){
