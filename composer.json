@@ -1,7 +1,7 @@
 {
     "autoload": {
         "classmap": [
-            "helpers","config","const","database","database/migrations","database/models"
+            "helpers","config","const","database","database/migrations","database/models","helpers/N10Helpers"
         ]
     },
     "require": {

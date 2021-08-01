@@ -1,26 +1,17 @@
 <?php
 
 use DiDom\Document;
-use GuzzleHttp\Client;
 
 /**
  * Created by PhpStorm.
  * User: phpartisan[dot]ir
- * Date: 7/28/21
- * Time: 00:23
+ * Date: 8/1/21
+ * Time: 19:09
  */
 
-class N10Helper
+class ParsePagesData
 {
-    private $pages_to_get = [
-        'صورت سود و زیان',
-        'نظر حسابرس',
-        'صورت سود و زیان جامع',
-        'صورت وضعیت مالی',
-        'صورت جریان های نقدی',
-        'جریان وجوه نقد',
-        'ترازنامه'
-    ];
+    private $pages , $pages_content;
 
     private $pages_to_get_en = [
         'صورت سود و زیان' => 'Income Statement',
@@ -39,109 +30,14 @@ class N10Helper
         'جریان وجوه نقد',
     ];
 
-    private $report_url,$pages;
-
-    private $pages_content = [];
-
-    public $company_type;
-
-    public $page_header_content = [];
-
-    public $data;
-
-    public function __construct($report_url)
+    public function __construct($pages,$pages_content)
     {
-        $this->report_url = $report_url;
+        $this->pages_content = $pages_content;
+
+        $this->pages = $pages;
     }
 
-    private function get_page_content($url)
-    {
-        $client = new Client(['verify' => AppConfig::GUZZLE_VERIFY]);
-
-        $req = $client->get($url);
-
-        if ($req->getStatusCode() == 200){
-            $content = $req->getBody()->getContents();
-
-            $this->pages_content[$this->get_sheet_id_from_url($url)] = $content;
-
-            return $content;
-        }else{
-            usleep(500000);
-            return $this->get_page_content($url);
-        }
-    }
-
-    public function get_pages()
-    {
-        $page_content = $this->get_page_content($this->report_url);
-
-        $didom = new Document($page_content,false);
-
-        $pages = $didom->find('#ddlTable')[0]->children();
-
-        $data = [];
-
-        foreach ($pages as $item){
-            if ($item->getNode()->nodeName == 'option'){
-
-                $title = trim($item->getNode()->textContent);
-
-                if (in_array($title,$this->pages_to_get)){
-                    $data[$title] = $item->getAttribute('value');
-                }
-            }
-        }
-
-        $this->pages = $data;
-    }
-
-    public function get_header_data()
-    {
-        $content = $this->pages_content[array_key_first($this->pages_content)];
-
-        $didom = new Document($content,false);
-
-        $rows = $didom->find('.text_holder');
-
-        $data = [];
-
-        foreach ($rows as $item){
-
-            if ($item->getNode()->nodeName == 'div'){
-
-                $boxes = $item->children();
-
-                $tmp = [];
-
-                foreach ($boxes as $box){
-                    if ($box->getNode()->nodeName == 'div'){
-                        $tmp[] = trim($box->getNode()->nodeValue);
-                    }
-                }
-
-                if (isset($tmp[1])){
-                    $data[str_replace(':','',$tmp[0])] = $tmp[1];
-                }else{
-                    $data['title'] = $tmp[0];
-                }
-
-            }
-        }
-
-        $this->page_header_content = $data;
-    }
-
-    public function get_all_pages()
-    {
-        foreach ($this->pages as $title => $sheet_id){
-            $url = $this->get_page_url_by_sheet_id($sheet_id);
-
-            $this->get_page_content($url);
-        }
-    }
-
-    public function get_all_pages_data()
+    public function parse_data_from_pages()
     {
         $data = [];
         foreach ($this->pages as $title => $sheet_id){
@@ -153,14 +49,13 @@ class N10Helper
                 $data[$title] = $this->parse_balance_sheet_table();
             }
         }
-        $this->data = $data;
-
-        $this->dd($data);
+        return $data;
     }
+
 
     //parse pages data
 
-    public function parse_general_tables($title)
+    private function parse_general_tables($title)
     {
         $content = $this->get_page_content_by_name($title);
 
@@ -173,7 +68,7 @@ class N10Helper
         return $this->make_table_from_json($table_data);
     }
 
-    public function parse_balance_sheet_table()
+    private function parse_balance_sheet_table()
     {
         $data = $this->parse_general_tables('ترازنامه');
 
@@ -206,7 +101,7 @@ class N10Helper
         ];
     }
 
-    public function parse_auditor_opinion()
+    private function parse_auditor_opinion()
     {
         $content = $this->get_page_content_by_name('نظر حسابرس');
 
@@ -261,12 +156,17 @@ class N10Helper
         }
 
         return [
-          'data' => $table,
-          'header' => $headers
+            'data' => $table,
+            'header' => $headers
         ];
     }
 
-    //helpers
+    //other helpers
+
+    private function get_page_content_by_name($title){
+        return $this->pages_content[$this->pages[$title]];
+    }
+
 
     private function get_en_table_name_by_title($title){
         foreach ($this->pages_to_get_en as $key => $value){
@@ -274,29 +174,5 @@ class N10Helper
                 return $value;
             }
         }
-    }
-
-    private function get_sheet_id_from_url($url){
-        return explode('sheetId=',parse_url($url)['query'])[1];
-    }
-
-    private function get_page_url_by_sheet_id($sheet_id){
-        $parse_url = parse_url($this->report_url);
-        $url_base = $parse_url['scheme'].'://'.$parse_url['host'].$parse_url['path'];
-        $url_query = explode('sheetId=',$parse_url['query'])[0].'sheetId='.$sheet_id;
-        return $url_base.'?'.$url_query;
-    }
-
-    private function get_page_content_by_name($title){
-        return $this->pages_content[$this->pages[$title]];
-    }
-
-    public function dd($val)
-    {
-        echo '<pre>';
-
-        var_dump($val);
-
-        die();
     }
 }
