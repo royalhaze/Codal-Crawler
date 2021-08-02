@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/../bootstrap.php';
+require __DIR__.'/../../bootstrap.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
 /**
  * Created by PhpStorm.
@@ -20,14 +20,14 @@ if ($db->hasTable($tables_prefix.'report_decision') || $db->hasTable('report_dec
 //create reports table
 Capsule::schema()->create($tables_prefix.'report_decision',function ($table){
     $table->increments('id');
-    $table->integer('report_id')->unsigned();
-    $table->integer('company_id')->unsigned();
-    $table->string('symbol_id',20)->nullable();
-    $table->string('symbol');
-    $table->string('year_leading_to');
-    $table->integer('registered_fund');
-    $table->integer('unregistered_fund');
-    $table->string('publisher_status');
+    $table->integer('report_id')->unsigned()->nullable();
+    $table->integer('company_id')->unsigned()->nullable();
+    $table->string('symbol_id',20)->nullable()->nullable();
+    $table->string('symbol')->nullable();
+    $table->string('year_leading_to')->nullable();
+    $table->integer('registered_fund')->nullable();
+    $table->integer('unregistered_fund')->nullable();
+    $table->string('publisher_status')->nullable();
 });
 
 echo 'report_decision table created successfully'.PHP_EOL;
@@ -35,13 +35,13 @@ echo 'report_decision table created successfully'.PHP_EOL;
 //create report data table
 Capsule::schema()->create($tables_prefix.'report_decision_data',function ($table){
     $table->increments('id');
-    $table->integer('report_id')->unsigned();
-    $table->string('for_page',64);
-    $table->string('title',128);
-    $table->integer('value');
-    $table->string('date_leading_to');
-    $table->integer('change');
-    $table->boolean('is_for_this_year');
+    $table->integer('report_id')->unsigned()->nullable();
+    $table->string('for_page',64)->nullable();
+    $table->string('title',128)->nullable();
+    $table->integer('value')->nullable();
+    $table->string('date_leading_to')->nullable();
+    $table->integer('change')->nullable();
+    $table->boolean('is_for_this_year')->nullable();
 });
 
 echo 'report_decision_data table created successfully'.PHP_EOL;

@@ -6,7 +6,7 @@
  * Time: 19:44
  */
 
-require __DIR__.'/../bootstrap.php';
+require __DIR__.'/../../bootstrap.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 

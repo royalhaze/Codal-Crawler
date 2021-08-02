@@ -28,6 +28,8 @@ class PageMetaDataHelper
 
     public function __construct($url,$report_id)
     {
+        $this->validate_url($url);
+
         $this->parseURL($url);
 
         $this->report_id = $report_id;
@@ -38,13 +40,20 @@ class PageMetaDataHelper
 
         $this->get_all_pages();
 
+        return $this;
+    }
+
+    private function validate_url($url){
+        if (count(explode('sheetId=',$url)) == 2){
+            throw new \Exception('آدرس وارد شده اشتباه است');
+        }
     }
 
     public function get_data()
     {
         $parse_data = new ParsePagesData($this->pages,$this->pages_content);
 
-        return $parse_data->parse_data_from_pages();
+        return new StorePagesData($this->page_header_content,$parse_data->parse_data_from_pages(),$this->report_id);
     }
 
     //guzzle & pages
