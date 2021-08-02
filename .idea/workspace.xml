@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/models/Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,21 +29,21 @@
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="21" />
+          <entry key="PHP Class.type" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="4" />
-          <entry key="php" value="147" />
+          <entry key="php" value="152" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="147" />
+          <entry key="PHP" value="152" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -53,14 +52,14 @@
           <entry key="dummy" value="9" />
           <entry key="gitignore" value="27" />
           <entry key="json" value="124" />
-          <entry key="php" value="24158" />
+          <entry key="php" value="24694" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="124" />
-          <entry key="PHP" value="24158" />
+          <entry key="PHP" value="24694" />
           <entry key="PLAIN_TEXT" value="320" />
         </counts>
       </usages-collector>
@@ -69,10 +68,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
+        <entry file="file://$PROJECT_DIR$/getn10.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="264">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <folding>
+                <element signature="n#store_nazare_hesabres#0;n#StorePagesData#0;n#!!top" />
+                <element signature="n#get_symbol_data#0;n#StorePagesData#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/CodalN10Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -98,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/models/Report.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="-222">
               <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#94#112#0#PHP" expanded="true" />
@@ -128,6 +149,7 @@
       <find>parse_ge</find>
       <find>dd</find>
       <find>sheetId</find>
+      <find>['header'][1]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,9 +201,11 @@
         <option value="$PROJECT_DIR$/database/migrations/n10Tables/create_n_10_tables.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php" />
-        <option value="$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php" />
         <option value="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" />
         <option value="$PROJECT_DIR$/database/models/Report.php" />
+        <option value="$PROJECT_DIR$/helpers/CodalN10Helper.php" />
+        <option value="$PROJECT_DIR$/getn10.php" />
+        <option value="$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php" />
       </list>
     </option>
   </component>
@@ -250,28 +274,13 @@
             <path>
               <item name="codal" type="b2602c69:ProjectViewProjectNode" />
               <item name="codal" type="462c0819:PsiDirectoryNode" />
-              <item name="const" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codal" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codal" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codal" type="462c0819:PsiDirectoryNode" />
               <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codal" type="b2602c69:ProjectViewProjectNode" />
               <item name="codal" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="N10Helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codal" type="b2602c69:ProjectViewProjectNode" />
@@ -285,7 +294,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="const&#9;null&#9;null&#10;test&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/test.php&#10;drop&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/n10Tables/drop_n_10_tables.php&#10;.json&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/composer.json&#10;composer&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/vendor/illuminate/support/Composer.php&#10;create&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;sear&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/helpers/CodalSearch.php&#10;read&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/readme.php&#10;Report&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/ReportData.php&#10;Const&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;Compan&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;Compa&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;CodalC&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;cre&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;creae&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Store&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/helpers/N10Helpers/StorePagesData.php&#10;const&#9;null&#9;null&#10;test&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/test.php&#10;drop&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/n10Tables/drop_n_10_tables.php&#10;.json&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/composer.json&#10;composer&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/vendor/illuminate/support/Composer.php&#10;create&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;sear&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/helpers/CodalSearch.php&#10;read&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/readme.php&#10;Report&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/ReportData.php&#10;Const&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;Compan&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;Compa&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/models/Company.php&#10;CodalC&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/const/CodalConst.php&#10;cre&#9;FILE&#9;file:///Users/macbook/Desktop/tmp/codal/database/migrations/create_tables.php&#10;creae&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -326,18 +335,18 @@
       <workItem from="1627414554136" duration="8528000" />
       <workItem from="1627551516950" duration="10774000" />
       <workItem from="1627654589317" duration="1403000" />
-      <workItem from="1627825169471" duration="13824000" />
+      <workItem from="1627825169471" duration="15069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79028000" />
+    <option name="totallyTimeSpent" value="80273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,7 +359,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837838" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -365,25 +374,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/functions_include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/collections/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/contracts/Database/ModelIdentifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-898" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Connection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -679,19 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding>
-            <element signature="n#store_general_tables_data#0;n#StorePagesData#0;n#!!top" />
-            <element signature="n#store_taraznameh_table_data#0;n#StorePagesData#0;n#!!top" />
-            <element signature="n#store_nazare_hesabres#0;n#StorePagesData#0;n#!!top" />
-            <element signature="n#get_symbol_data#0;n#StorePagesData#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-518">
@@ -701,20 +678,6 @@
             <element signature="n#get_all_pages#0;n#PageMetaDataHelper#0;n#!!top" />
             <element signature="n#get_page_url_by_sheet_id#0;n#PageMetaDataHelper#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -737,10 +700,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/models/Report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="-222">
           <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#94#112#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/CodalSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/CodalN10Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getn10.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="n#store_nazare_hesabres#0;n#StorePagesData#0;n#!!top" />
+            <element signature="n#get_symbol_data#0;n#StorePagesData#0;n#!!top" />
           </folding>
         </state>
       </provider>

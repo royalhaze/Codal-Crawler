@@ -79,13 +79,16 @@ class StorePagesData
     private function store_general_tables_data($data,$page_title){
         $items = [];
         $change_key = null;
-        foreach ($data['header'][1] as $key => $value){
+
+        $header_key = array_key_first($data['header']);
+
+        foreach ($data['header'][$header_key] as $key => $value){
             if ($value != 'شرح' && $value != 'درصد
- تغییرات') {
+ تغییرات' && $value != 'درصد تغییر') {
                 $items[$key] = $value;
             }
             if ($value == 'درصد
- تغییرات') {
+ تغییرات' || $value == 'درصد تغییر') {
                 $change_key = $key;
             }
         }
@@ -114,17 +117,19 @@ class StorePagesData
     private function store_taraznameh_table_data($data,$page_title){
         $new_header = [];
 
-        $header_count = count($data['header'][1])/2;
+        $header_key = array_key_first($data['header']);
+
+        $header_count = count($data['header'][$header_key])/2;
 
         for ($i = 1 ; $i <= $header_count ; $i++){
-            if ($data['header'][1][$i] == 'پایان عملکرد واقعی منتهی به'){
-                $new_header[$i] = $data['header'][1][$i].$data['header'][2][$i];
+            if ($data['header'][$header_key][$i] == 'پایان عملکرد واقعی منتهی به'){
+                $new_header[$i] = $data['header'][$header_key][$i].$data['header'][2][$i];
             }else{
-                $new_header[$i] = $data['header'][1][$i];
+                $new_header[$i] = $data['header'][$header_key][$i];
             }
         }
 
-        $data['header'][1] = $new_header;
+        $data['header'][$header_key] = $new_header;
 
         $this->store_general_tables_data($data,$page_title);
     }
