@@ -63,13 +63,6 @@ class CodalSearchResultParser
                 Report::store_from_search_result($item);
             }
         }
-
-//        foreach ($this->letters as $item){
-//            if (Report::where('tracking_no',(int) $item->TracingNo)->count() == 0){
-//                Report::store_from_search_result($item);
-//            }
-//        }
-
         return true;
     }
 }

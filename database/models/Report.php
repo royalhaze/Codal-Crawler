@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Report extends Model
 {
+    private $reportURL;
+
     protected $table = AppConfig::TABLE_PREFIX.'reports';
 
     protected $guarded = ['id'];
@@ -42,11 +44,21 @@ class Report extends Model
             unset($parsed_data['attach']);
         }
 
+        $report_url = $parsed_data['report_url'];
+
+        unset($parsed_data['report_url']);
+
         $db = Report::create($parsed_data);
 
         if (!$db instanceof Report) {
             throw new \Exception();
         }
+
+        ReportData::create([
+           'report_id' => $db->id,
+           'title' => 'ReportUrl',
+           'value' => CodalConst::CODAL_BASE_URL.$report_url
+        ]);
 
         if (isset($attach)) {
             foreach ($attach as $file) {
@@ -102,6 +114,7 @@ class Report extends Model
             'publish_time' => self::parse_publish_date_to_date_time($data->PublishDateTime),
             'publish_time_original' => $data->PublishDateTime,
             'crawl_time' => Carbon::now('Asia/Tehran')->toDateTime(),
+            'report_url' => $data->Url
         ];
     }
 
