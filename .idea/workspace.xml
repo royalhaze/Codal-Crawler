@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008a3cc2-ba70-425f-90a9-d0583e018a09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/helpers/CodalN10Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/CodalN10Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getn10.php" beforeDir="false" afterPath="$PROJECT_DIR$/getn10.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,14 +36,14 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="4" />
-          <entry key="php" value="157" />
+          <entry key="php" value="159" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="157" />
+          <entry key="PHP" value="159" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -51,14 +52,14 @@
           <entry key="dummy" value="9" />
           <entry key="gitignore" value="27" />
           <entry key="json" value="124" />
-          <entry key="php" value="25293" />
+          <entry key="php" value="25687" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="124" />
-          <entry key="PHP" value="25293" />
+          <entry key="PHP" value="25687" />
           <entry key="PLAIN_TEXT" value="320" />
         </counts>
       </usages-collector>
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getn10.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            <state relative-caret-position="360">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -97,13 +98,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers/CodalN10Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="600">
               <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding>
                 <element signature="n#get#0;n#CodalN10Helper#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/ParsePagesData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="n#parse_general_tables#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#parse_balance_sheet_table#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#parse_auditor_opinion#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#get_json_data_from_html#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#get_en_table_data_from_json#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#make_table_from_json#0;n#ParsePagesData#0;n#!!top" />
+                <element signature="n#get_en_table_name_by_title#0;n#ParsePagesData#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+              <folding>
+                <element signature="e#7#26#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,14 +208,14 @@
         <option value="$PROJECT_DIR$/database/models/Decision.php" />
         <option value="$PROJECT_DIR$/database/migrations/n10Tables/drop_n_10_tables.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php" />
         <option value="$PROJECT_DIR$/helpers/CodalSearchResultParser.php" />
         <option value="$PROJECT_DIR$/database/models/Report.php" />
         <option value="$PROJECT_DIR$/database/migrations/n10Tables/create_n_10_tables.php" />
-        <option value="$PROJECT_DIR$/getn10.php" />
         <option value="$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php" />
         <option value="$PROJECT_DIR$/n10cronjob.php" />
         <option value="$PROJECT_DIR$/helpers/CodalN10Helper.php" />
+        <option value="$PROJECT_DIR$/getn10.php" />
+        <option value="$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php" />
       </list>
     </option>
   </component>
@@ -257,6 +288,12 @@
             </path>
             <path>
               <item name="codal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codal" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="N10Helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codal" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -309,18 +346,18 @@
       <workItem from="1627551516950" duration="10774000" />
       <workItem from="1627654589317" duration="1403000" />
       <workItem from="1627825169471" duration="15408000" />
-      <workItem from="1627996643373" duration="3098000" />
+      <workItem from="1627996643373" duration="4691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83710000" />
+    <option name="totallyTimeSpent" value="85303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20457797" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20457797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,7 +370,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837838" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -537,20 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/ParsePagesData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-518">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/const/CodalConst.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -603,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getn10.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/StorePagesData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -628,12 +644,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/ParsePagesData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="n#parse_general_tables#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#parse_balance_sheet_table#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#parse_auditor_opinion#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#get_json_data_from_html#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#get_en_table_data_from_json#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#make_table_from_json#0;n#ParsePagesData#0;n#!!top" />
+            <element signature="n#get_en_table_name_by_title#0;n#ParsePagesData#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getn10.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helpers/CodalN10Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="600">
           <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="n#get#0;n#CodalN10Helper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/N10Helpers/PageMetaDataHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#26#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

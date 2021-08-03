@@ -2,6 +2,8 @@
 
 use DiDom\Document;
 use GuzzleHttp\Client;
+use GuzzleHttp\Promise\EachPromise;
+use GuzzleHttp\Psr7\Response;
 
 /**
  * Created by PhpStorm.
@@ -38,7 +40,7 @@ class PageMetaDataHelper
 
         $this->get_header_data();
 
-        $this->get_all_pages();
+        $this->get_all_pages_async();
 
         return $this;
     }
@@ -74,9 +76,29 @@ class PageMetaDataHelper
 
             return $content;
         }else{
-            usleep(500000);
-            return $this->get_page($url);
+            throw new \Exception('fetch page error');
         }
+    }
+
+    private function get_pages_async($pages = []){
+        $client = new Client(['verify' => AppConfig::GUZZLE_VERIFY]);
+        $requests = [];
+        foreach ($pages as $link){
+            $requests[$link] = $client->getAsync($link);
+        }
+
+        $each_req = new EachPromise($requests,[
+            'fulfilled' => function (Response $response,$index) {
+                if ($response->getStatusCode() != 200) {throw new \Exception('get page fail');}
+                $content = $response->getBody()->getContents();
+                $this->pages_content[$this->get_sheet_id_from_url($index)] = $content;
+            },
+            'rejected' => function ($reason) {
+                throw new \Exception($reason);
+            }
+        ]);
+
+        $each_req->promise()->wait();
     }
 
     private function get_pages_title_and_url($url){
@@ -144,6 +166,16 @@ class PageMetaDataHelper
 
             $this->get_page($url);
         }
+    }
+
+    private function get_all_pages_async(){
+        $links = [];
+        foreach ($this->pages as $title => $sheet_id){
+            $url = $this->get_page_url_by_sheet_id($sheet_id);
+
+            $links[] = $url;
+        }
+        $this->get_pages_async($links);
     }
 
     //url helpers
