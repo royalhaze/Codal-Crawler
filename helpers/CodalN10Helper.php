@@ -1,4 +1,7 @@
 <?php
+
+use Carbon\Carbon;
+
 /**
  * Created by PhpStorm.
  * User: phpartisan[dot]ir
@@ -21,5 +24,20 @@ class CodalN10Helper
         $store = new PageMetaDataHelper($page_url,$report_id);
 
         $store->get_data()->store();
+    }
+
+    public static function cronjob()
+    {
+        $n10s = Report::where('letter_code','ن-۱۰')->where('symbol_id','!=',null)->where('crawl_time','>',Carbon::now('Asia/Tehran')->subMinutes(20))->orderBy('id','DESC')->get();
+
+        foreach ($n10s as $item){
+            $has_decision = Decision::where('report_id',$item->id)->count();
+
+            if ($has_decision == 0){
+                var_dump($item->id);
+                //get here
+            }
+        }
+
     }
 }
