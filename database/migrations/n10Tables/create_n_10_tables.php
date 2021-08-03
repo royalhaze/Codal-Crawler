@@ -41,7 +41,7 @@ Capsule::schema()->create($tables_prefix.'report_decision_data',function ($table
     $table->integer('value')->nullable();
     $table->string('date_leading_to')->nullable();
     $table->integer('change')->nullable();
-    $table->boolean('is_for_this_year')->nullable();
+    $table->integer('col_no')->nullable();
 });
 
 echo 'report_decision_data table created successfully'.PHP_EOL;

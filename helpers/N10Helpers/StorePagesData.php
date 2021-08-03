@@ -94,7 +94,7 @@ class StorePagesData
         }
 
         $data_to_store = [];
-
+        $col_no = 1;
         foreach ($items as $key => $value){
             foreach ($data['data'] as $item){
                 $data_to_store[] = [
@@ -103,10 +103,11 @@ class StorePagesData
                     'title' => $item[1],
                     'value' => (int)$item[$key],
                     'date_leading_to' => $value,
-                    'change' => (int)$item[$change_key],
-                    'is_for_this_year' => ($key == 2)?true:false,
+                    'change' => ($col_no == 1)?(int)$item[$change_key]:0,
+                    'col_no' => $col_no,
                 ];
             }
+            $col_no++;
         }
 
         foreach ($data_to_store as $data){
