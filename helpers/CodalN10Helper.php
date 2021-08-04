@@ -28,14 +28,13 @@ class CodalN10Helper
 
     public static function cronjob()
     {
-        $n10s = Report::where('letter_code','ن-۱۰')->where('symbol_id','!=',null)->where('crawl_time','>',Carbon::now('Asia/Tehran')->subMinutes(20))->orderBy('id','DESC')->get();
+        $n10s = Report::where('letter_code','ن-۱۰')->where('symbol_id','!=',null)->where('crawl_time','>',Carbon::now('Asia/Tehran')->subMinutes(15))->orderBy('id','DESC')->get();
 
         foreach ($n10s as $item){
             $has_decision = Decision::where('report_id',$item->id)->count();
 
             if ($has_decision == 0){
-                var_dump($item->id);
-                //get here
+                self::get($item->id);
             }
         }
 
