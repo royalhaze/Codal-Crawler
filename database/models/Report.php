@@ -4,6 +4,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 use Carbon\Carbon;
 use DiDom\Document;
+use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -146,14 +147,15 @@ class Report extends Model
     {
         $url = CodalConst::CODAL_BASE_URL . $url;
 
-        $arrContextOptions = array(
-            "ssl" => array(
-                "verify_peer" => false,
-                "verify_peer_name" => false,
-            ),
-        );
+        $client = new Client(['verify' => AppConfig::GUZZLE_VERIFY]);
 
-        $page = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $res = $client->get($url);
+
+        if ($res->getStatusCode() != 200){
+            throw new \Exception('page get error');
+        }
+
+        $page = $res->getBody()->getContents();
 
         $document = new Document($page, false);
 

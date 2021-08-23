@@ -13,6 +13,7 @@ class AppConfig
     const SYMBOL_NAME_COLUMN_NAME = 'symbol';
     const SYMBOL_ID_COLUMN_NAME = 'symbol_id';
     const GUZZLE_VERIFY = false;
+    const N10SEARCHTIME = 120;
 
     public static function CronJobLetterCodeFilter()
     {

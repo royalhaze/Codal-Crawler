@@ -20,6 +20,7 @@ class CronJobHelper
         if (Report::count() != 0){
             $last_record = self::get_last_report_inserted_to_db();
 
+            //find page of last report stored in database
             while (true){
                 $isOnThisPage = false;
 
@@ -38,8 +39,10 @@ class CronJobHelper
 
                 $page++;
             }
-        }
 
+            //end find page
+        }
+        //get reports
         for ($i = $page;$i >= 1;$i--){
             $search->search($i)->get_result()->addLetterCodeFilter($LetterCode)->store();
         }

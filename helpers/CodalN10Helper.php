@@ -14,13 +14,14 @@ class CodalN10Helper
     public static function get($report_id)
     {
         $report = Report::findOrFail($report_id);
-
+        //validate
         if ($report->letter_code != 'ن-۱۰'){
             throw new \Exception('اطلاعیه از نوع ن ۱۰ نمیباشد');
         }
-
+        //get report url
         $page_url = ReportData::where('report_id',$report_id)->where('title','ReportUrl')->firstOrFail()->value;
 
+        //start store functions
         $store = new PageMetaDataHelper($page_url,$report_id);
 
         $store->get_data()->store();
@@ -28,7 +29,7 @@ class CodalN10Helper
 
     public static function cronjob()
     {
-        $n10s = Report::where('letter_code','ن-۱۰')->where('symbol_id','!=',null)->where('crawl_time','>',Carbon::now('Asia/Tehran')->subMinutes(15))->orderBy('id','DESC')->get();
+        $n10s = Report::where('letter_code','ن-۱۰')->where('symbol_id','!=',null)->where('crawl_time','>',Carbon::now('Asia/Tehran')->subMinutes(AppConfig::N10SEARCHTIME))->orderBy('id','DESC')->get();
 
         foreach ($n10s as $item){
             $has_decision = Decision::where('report_id',$item->id)->count();
